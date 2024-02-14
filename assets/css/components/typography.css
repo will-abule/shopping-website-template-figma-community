@@ -1,0 +1,273 @@
+/* text start */
+
+.text {
+	font-size: 4px;
+}
+
+@media (min-width: 400px) {
+	.text {
+		font-size: 5px;
+	}
+}
+
+@media (min-width: 700px) {
+	.text {
+		font-size: 6px;
+	}
+}
+
+@media (min-width: 1000px) {
+	.text {
+		font-size: 8px;
+	}
+}
+
+@media (min-width: 1440px) {
+	.text {
+		font-size: 10px;
+	}
+}
+
+/* text end */
+
+.shake-container {
+	display: block;
+	width: fit-content;
+}
+
+.shake-container .shake {
+	display: block;
+	height: 8em;
+	width: calc(100% + 15em);
+	background-color: var(--white-color);
+	margin-left: -2em;
+	animation: slideInToShake 1s linear 0s 1 forwards,
+		shake 0.5s linear 1s infinite alternate;
+}
+
+.shake-yellow {
+	background-color: var(--yellow-color) !important;
+}
+
+.shake-container .shake-text-container {
+	display: block;
+	position: relative;
+	margin-top: -10em;
+	font-weight: 900;
+	text-transform: uppercase;
+}
+
+.shake-container .shake-text-container .shake-text {
+	font-size: 8em;
+}
+
+@keyframes slideInToShake {
+	from {
+		opacity: 0;
+		transform: translateX(-100%);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateX(0%);
+	}
+}
+
+@keyframes shake {
+	from {
+		transform: rotate(-3deg);
+	}
+
+	to {
+		transform: rotate(3deg);
+	}
+}
+
+.h1-text-container {
+	font-family: "Poppins";
+	font-weight: 900;
+	text-transform: uppercase;
+}
+
+.h1-text-container .h1-text {
+	font-size: 8em;
+}
+
+/* h2-text-container start */
+
+.h2-text-container {
+	font-family: "Poppins";
+	font-weight: 900;
+	position: relative;
+	display: inline-block;
+}
+
+.h2-text-container .h2-text {
+	font-size: 4em;
+}
+
+.h2-text-container > span {
+	display: inline-block;
+}
+
+.h2-text-container .size {
+	position: absolute;
+	top: 1em;
+	right: -3.5em;
+	transform: scale(0.65);
+
+	z-index: -1;
+}
+
+.h2-text-container-size-animation {
+	animation: curve 1s linear 1 forwards;
+}
+
+@media (min-width: 1000px) {
+	.h2-text-container .size {
+		top: 1.5em;
+	}
+}
+
+@media (min-width: 1440px) {
+	.h2-text-container .size {
+		top: 2.5em;
+		right: -1.5em;
+		transform: scale(0.9);
+	}
+}
+
+@keyframes curve {
+	0% {
+		transform: translate(-150%, 0%) scale(1);
+		opacity: 0;
+	}
+
+	25% {
+		transform: translate(-75%, -75%) scale(0.9);
+		opacity: 1;
+	}
+
+	50% {
+		transform: translate(-50%, -10%) scale(0.8);
+	}
+
+	75% {
+		transform: translate(-25%, 50%) scale(0.7);
+	}
+
+	100% {
+		transform: translate(0%, 0%) scale(0.65);
+	}
+}
+@media (min-width: 1440px) {
+	@keyframes curve {
+		0% {
+			transform: translate(-150%, 0%) scale(1);
+			opacity: 0;
+		}
+
+		25% {
+			transform: translate(-75%, -75%) scale(0.9);
+			opacity: 1;
+		}
+
+		50% {
+			transform: translate(-50%, -10%) scale(0.8);
+		}
+
+		75% {
+			transform: translate(-25%, 50%) scale(0.7);
+		}
+
+		100% {
+			transform: translate(0%, 0%) scale(0.9);
+		}
+	}
+}
+
+/* h2-text-container end */
+
+.news-latter-header-container {
+	font-family: "Poppins";
+	font-weight: 900;
+	color: var(--white-color);
+}
+
+.news-latter-header-container .news-latter-header-text {
+	font-size: 4em;
+}
+
+.title-text-container {
+	font-family: "Poppins";
+	font-weight: 500;
+	text-transform: capitalize;
+}
+
+.title-text-container .title-text {
+	font-size: 2.5em;
+}
+
+.sales-header-text-container {
+	font-family: "Poppins";
+	font-weight: 700;
+	letter-spacing: 0.1em;
+}
+
+.sales-header-text-container .sales-header-text {
+	font-size: 2.6em;
+}
+
+.hero-text-container {
+	font-family: "Poppins";
+	color: var(--black-color);
+}
+
+.sales-text-container {
+	font-family: "Poppins";
+	font-weight: 500;
+}
+
+.sales-text-container .sales-text {
+	font-size: 2.6em;
+}
+
+.hero-text-container .hero-text {
+	color: var(--black-color);
+	font-size: 2.5em;
+}
+
+.gray-text-container {
+	font-family: "Poppins";
+	font-weight: 500;
+
+	color: var(--gray-color);
+}
+
+.gray-text-container .gray-text {
+	font-size: 2em;
+}
+
+.news-latter-text-container {
+	font-family: "Poppins";
+	font-weight: 400;
+	color: var(--white-color);
+}
+
+.news-latter-text-container .news-latter-text {
+	font-size: 3em;
+}
+
+.explore-text-container {
+	font-family: "Poppins";
+	font-weight: 500;
+
+	color: var(--gray-color);
+
+	text-decoration: none;
+	text-transform: capitalize;
+}
+
+.explore-text-container .explore-text {
+	font-size: 2em;
+}

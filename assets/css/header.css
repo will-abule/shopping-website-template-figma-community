@@ -1,0 +1,266 @@
+header {
+	position: relative;
+	background-color: var(--white-color);
+	color: var(--black-color);
+}
+
+#nav {
+	background-color: var(--white-color);
+	position: fixed;
+	top: 0;
+	width: 100%;
+	padding: 2.4em;
+	transition: all 0.5s linear;
+	z-index: 1440;
+}
+
+.nav-shadow {
+	box-shadow: 0px 10px 20px 10px rgba(0, 0, 0, 0.09);
+}
+
+nav {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+nav .menu-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	position: relative;
+}
+
+nav .menu {
+	visibility: hidden;
+	font-family: "Poppins";
+	font-weight: 500;
+	text-align: center;
+	max-height: 0;
+	overflow: hidden;
+
+	list-style: none;
+	transition: all 0.3s linear;
+}
+
+nav .open {
+	margin-top: 2em;
+	visibility: visible;
+	max-height: 100vh;
+}
+
+nav .menu-container .logo-container {
+	display: flex;
+	align-items: center;
+}
+
+nav .menu-container .logo-container .logo-img {
+	height: 4em;
+	width: 4em;
+	object-fit: contain;
+}
+
+nav .menu-container .logo-container .logo-text {
+	color: var(--black-color);
+	font-family: "Poppins";
+	font-size: 4em;
+	font-style: normal;
+	font-weight: 900;
+	letter-spacing: 0.12em;
+}
+
+nav .menu-container .toggle-containers .svg-inline--fa {
+	cursor: pointer;
+	height: 4em;
+}
+
+nav .menu .menu-item {
+	background-color: transparent;
+	text-transform: uppercase;
+	cursor: pointer;
+
+	padding: 1em;
+
+	transition: all 0.3s linear;
+}
+
+@media (min-width: 800px) {
+	nav .menu .menu-item {
+		padding: 1em 2em;
+	}
+}
+
+nav .menu .menu-item:hover {
+	background-color: var(--black-color);
+	color: var(--white-color);
+}
+
+nav .menu .menu-item:last-child:hover {
+	background-color: var(--white-color);
+	transform: scale(1);
+}
+
+nav .menu .menu-item a {
+	font-size: 2em;
+}
+
+nav .menu .menu-item .btn {
+	padding: 2em 3em;
+}
+
+@media (min-width: 700px) {
+	nav {
+		align-items: center;
+	}
+
+	nav .menu-container {
+		flex-direction: column;
+	}
+
+	nav .menu-container .toggle-containers {
+		display: none;
+	}
+
+	nav .menu {
+		display: flex;
+		align-items: center;
+		visibility: visible;
+		max-height: initial;
+	}
+
+	nav .menu .menu-item:hover {
+		transform: scale(0.8);
+	}
+}
+
+@media (min-width: 1440px) {
+	nav,
+	nav .menu-container {
+		flex-direction: row;
+	}
+}
+
+.hero {
+	border-radius: 5.9em;
+	background: rgb(244, 246, 245);
+
+	display: flex;
+	justify-content: center;
+	margin: 12em auto 0;
+}
+
+@media (min-width: 700px) {
+	.hero {
+		margin-top: 20em;
+	}
+}
+
+@media (min-width: 1440px) {
+	.hero {
+		margin-top: 15em;
+	}
+}
+
+.hero .left {
+	margin: 10% 0 0% 7%;
+}
+
+.hero .left > * {
+	margin-bottom: 2em;
+}
+
+.hero .left .actions {
+	display: flex;
+	align-items: center;
+	column-gap: 2em;
+}
+
+.hero .left .actions > span {
+	flex: 0 1 40%;
+}
+
+.hero .left .actions > span .btn-curve {
+	width: 100%;
+}
+
+.hero .left .actions button {
+	flex-grow: 1;
+}
+
+.hero .right {
+	display: none;
+}
+
+@media (min-width: 1000px) {
+	.hero .left {
+		flex: 0 1 auto;
+	}
+
+	.hero .right {
+		position: relative;
+		display: initial;
+		flex: 1 0 60%;
+	}
+
+	.hero .right .promotion-img {
+		width: 100%;
+		position: absolute;
+		bottom: 0;
+
+		animation: leftToRight 1s linear 0s infinite alternate forwards;
+	}
+
+	@keyframes leftToRight {
+		from {
+			transform: scale(0.9) translate(5%, 5%);
+		}
+		to {
+			transform: scale(1) translate(0%, 0%);
+		}
+	}
+
+	.hero .right .star {
+		transform: rotate(0deg);
+		position: absolute;
+		animation: rotate 3s linear 0s infinite;
+	}
+
+	.hero .right .star-1 {
+		top: 10%;
+	}
+
+	.hero .right .star-2 {
+		top: 15%;
+		right: 15%;
+	}
+
+	.hero .right .star-3 {
+		bottom: 5%;
+		left: 5%;
+	}
+
+	.hero .right .star-4 {
+		bottom: 15%;
+		right: 5%;
+	}
+}
+
+@media (min-width: 1440px) {
+	.hero .left {
+		margin: 10% 0 10% 7%;
+	}
+}
+
+.partners {
+	list-style: none;
+	padding: 6em 2em 4em;
+	margin-top: 4em;
+	background-color: var(--yellow-color);
+}
+
+.partners li img {
+	width: 100%;
+	height: 6em;
+	object-fit: contain;
+}

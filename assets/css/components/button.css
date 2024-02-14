@@ -1,0 +1,49 @@
+.btn {
+	display: inline-block;
+
+	border: 0.1em solid var(--black-color);
+	border-radius: 1em;
+
+	padding: 2em;
+
+	font-size: 6px !important;
+	font-weight: 500;
+
+	background-color: var(--black-color);
+	color: var(--white-color);
+
+	transition: all 0.3s linear;
+	cursor: pointer;
+}
+
+.btn .btn-text {
+	font-size: 2em;
+}
+
+.btn:hover {
+	background-color: var(--white-color);
+	color: var(--black-color);
+}
+
+.btn-curve {
+	width: 16em;
+	height: 3.1955em;
+}
+
+@media (min-width: 400px) {
+	.btn {
+		font-size: 7px !important;
+	}
+}
+
+@media (min-width: 700px) {
+	.btn {
+		font-size: 8px !important;
+	}
+}
+
+@media (min-width: 1440px) {
+	.btn {
+		font-size: 10px !important;
+	}
+}
